@@ -1,0 +1,206 @@
+html {
+  height: 100%;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  max-height: 100vh;
+  font-family: "Overpass", sans-serif;
+}
+
+.flex-main {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom , hsl(213, 19%, 18%),
+    hsl(215, 17%, 13%)
+  );
+  justify-content: center;
+  width: 17.5rem;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+h1 {
+  color: hsl(0, 100%, 100%);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+p {
+  color: hsl(217, 12%, 63%);
+  font-weight: 400;
+  font-size: .85rem;
+}
+
+.icon {
+  height: 1rem;
+  width: 1rem;
+  background-color: #2C343F;
+  border-radius: 50%;
+  padding: 1rem;
+}
+
+.icon-thanks {
+  height: 6rem;
+  width: auto;
+  padding: 0 4rem;
+}
+
+.flex-nums {
+ display: flex;
+ gap: 1rem;
+ justify-content: space-evenly;
+}
+
+.rating {
+  background-color: #2C343F;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: hsl(217, 12%, 63%);
+  font-size: .70rem;
+}
+
+.rating:hover {
+  background-color: white;
+  color: black;
+}
+
+.btn {
+  background-color: hsl(25, 97%, 53%);
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border: none;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: hsl(0, 100%, 100%);
+}
+
+.pressed {
+  background-color: hsl(25, 97%, 53%);
+  color: black;
+}
+
+.final-rating {
+  background-color: #2C343F;
+  border-radius: 15px;
+  color: hsl(25, 97%, 53%);
+  font-size: 0.80rem;
+  padding: .5rem;
+  margin: 1.5rem 3rem 1rem 3rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.thank-you-state {
+  text-align: center;
+}
+  
+.alert {
+  background-color: hsl(213, 19%, 18%);
+  color: hsl(25, 97%, 53%);
+  padding: 2rem 1rem;
+  border-radius: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: .7rem;
+  margin-bottom: 15px;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+  animation: popup 0.5s;
+}
+
+.close-btn {
+  margin-left: 15px;
+  color: white;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.close-btn:hover {
+  color: black;
+}
+
+@keyframes popup {
+  0% {transform: scale(0.5);
+      opacity: 0;}
+  20% {transform: scale(1.15);
+       opacity: 1;}
+  40% {transform: scale(0.95);}
+  60% {transform: scale(1.1);}
+  80% {transform: scale(0.98);}
+  100% { transform: scale(1);}
+}
+
+@media (min-width: 768px) {
+  .flex-main {
+    width: 22rem;
+    flex-basis: 22rem;
+    border-radius: 8%;
+    padding: 1.5rem 2rem;
+    
+  }
+
+  h1 {
+    margin-top: 2.5rem;
+    margin-bottom: .8rem;
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin: auto auto 1rem auto;
+    width: 22.5rem;
+    
+  }
+
+  .icon {
+    margin-top: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    margin: 2rem .6rem .6rem .6rem;
+    padding: .8rem;
+  }
+  .rating {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1rem;
+  }
+
+  .icon-thanks {
+    height: 6rem;
+    padding: 1.5rem 6rem;
+  }
+
+  .final-rating {
+    font-size: .9rem;
+    padding: .5rem 0;
+    width: 11.25rem;
+    margin: auto;
+    
+  }
+}
